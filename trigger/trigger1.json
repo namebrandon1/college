@@ -1,0 +1,30 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Exercise_04",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"SourceFolder": "@triggerBody().folderPath",
+					"SourceFile": "@triggerBody().fileName"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/inpu/blobs/",
+			"blobPathEndsWith": ".txt",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/3c0434f4-d1d9-4a5a-a32b-5c5481a30425/resourceGroups/raj_ltirg/providers/Microsoft.Storage/storageAccounts/rajstore",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}

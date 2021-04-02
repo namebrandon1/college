@@ -1,0 +1,25 @@
+{
+	"name": "AzureSqlSalesLTTables__01",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseSampleLS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "SalesLT",
+			"table": {
+				"value": "@dataset().tablename",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

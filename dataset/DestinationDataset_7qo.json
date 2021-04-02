@@ -1,0 +1,16 @@
+{
+	"name": "DestinationDataset_7qo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseSampleLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"table": "Azure Blob Storage file"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

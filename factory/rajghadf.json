@@ -1,0 +1,9 @@
+{
+	"name": "rajghadf",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4de43264-9cb3-4cf7-8651-3cd4df1d6408",
+		"tenantId": "fc4842e9-b2c3-4106-b145-a3429b01eb18"
+	}
+}

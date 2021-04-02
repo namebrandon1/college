@@ -1,0 +1,33 @@
+{
+	"name": "InpuDataSet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "InpuLS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SourceFolder": {
+				"type": "string",
+				"defaultValue": "@pipeline().parameters.sourceFolder"
+			},
+			"SourceFile": {
+				"type": "string",
+				"defaultValue": "@pipeline().parameters.sourceFile"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "inpu"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
